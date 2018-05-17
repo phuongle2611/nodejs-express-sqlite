@@ -1,0 +1,187 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>
+    </title>
+	<meta name="viewport" content="width=980">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+
+    <link rel="stylesheet" type="text/css" href="/charts/css/jquery.jqChart.css" />
+    <link rel="stylesheet" type="text/css" href="/charts/css/jquery.jqRangeSlider.css" />
+    <!-- <link rel="stylesheet" type="text/css" href="../charts/themes/smoothness/jquery-ui-1.10.4.css" /> -->
+    <link rel="stylesheet" href="/jquery/css/jquery-ui.css">
+
+    <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="/css/jquery.jqGauges.css" />
+    <link rel="stylesheet" type="text/css" href="/css/gauge3.css">
+    <script src="/jquery/js/jquery-3.2.1.slim.min.js"></script>
+    <script src="/popper/js/popper.min.js"></script>
+    <script src="/bootstrap/js/bootstrap.min.js"></script>
+
+    <script src="/moment/js/moment.min.js"></script>
+    <script src="/moment/js/moment-timezone-with-data-2012-2022.min.js"></script>
+
+    <script src="/jquery/js/jquery-1.12.4.js"></script>
+    <script src="/jquery/js/jquery-ui.js"></script>
+    <script type="text/javascript" src="/js/jquery.scrollTo.js"></script>
+
+    <script src="/createjs/js/easeljs-0.8.2.min.js"></script>
+
+    <script type='text/javascript' src='/js/settime.js'></script>
+
+<!--JQWIGETS core-->
+    <link rel="stylesheet" href="/jqwidgets/styles/jqx.base.css" type="text/css" />
+	<!-- <script type="text/javascript" src="../scripts/jquery-1.11.1.min.js"></script> -->
+	<script type="text/javascript" src="/jqwidgets/jqxcore.js"></script>
+	<script type="text/javascript" src="/jqwidgets/jqxchart.core.js"></script>
+	<script type="text/javascript" src="/jqwidgets/jqxdraw.js"></script>
+	<script type="text/javascript" src="/jqwidgets/jqxdata.js"></script>
+    <script type="text/javascript" src="/jqwidgets/jqxtooltip.js"></script>
+    <script type="text/javascript" src="/jqwidgets/jqxbulletchart.js"></script>
+    <!--<script type="text/javascript" src="/scripts/demos.js"></script>-->
+
+    <script src="/js/jquery.jqGauges.min.js" type="text/javascript"></script>
+    <!-- <script src="jqxBulletChart.js" type="text/javascript"></script> -->
+    <script src="/js/radialgauge3.js" type="text/javascript"></script>
+    <script src="/js/doupdate3.js" type="text/javascript"></script>
+</head>
+<body>
+
+    <div class="container-fluid">
+        <div class="row" style="justify-content: center">
+            <br>
+        </div>
+        <div class="row" style="justify-content: center">
+            <a class="btn btn-info" href="/mobile/0">Mobile Screen</a>
+        </div>
+        <div class="row" style="justify-content: center">
+            <br>
+        </div>
+        <div class="fill-color row" style="justify-content: center;">
+            <div class="col-xs-8" style="background-color: black;border: hidden; width: 550px;">
+                <div id="jqRadialGauge" style="width: 550px; height: 469px;"></div>
+                <div><a href="" onclick="location.reload()"><img class="tempz" src="/images/powerby.png"></a></div>
+                <!-- <div><a href="" onclick="location.reload()"><img class="powerby" src="http://temperzone.splashmonitoring.com/assets/temperzone/powerby.png"></a></div> -->
+            </div>
+            <div class="col-xs-4" style="width:415px; background-color: black;">
+                <div class="flexcontainer" style="width:415px">
+                    <div class="flexchild" style="width: 415px;">
+                        <canvas id="demoCanvas1" width="400" height="45" style="margin-top: 10px;"></canvas>
+                        <canvas id="demoCanvas2" width="400" height="45" style="margin-top: 10px;"></canvas>
+                        <canvas id="demoCanvas3" width="400" height="45" style="margin-top: 10px;"></canvas>
+                        <canvas id="demoCanvas4" width="400" height="45" style="margin-top: 10px;"></canvas>
+                    </div>
+
+                </div>
+
+                <div class="flexcontainer" style="width:415px;">
+                    <div class="flexchild" style="width: 415px; height: 30px;">
+                        <canvas id="panel-left" width="127" height="30" style="margin-right: 5px;"></canvas>
+                        <canvas id="panel-middle" width="127" height="30" style="margin-right: 5px;"></canvas>
+                        <canvas id="panel-right" width="127" height="30"></canvas>
+                    </div>
+                </div>
+
+                <div class="flexcontainer" style="width:415px;">
+                    <div class="flexchild" style="width: 415px; height: 30px;">
+                        <canvas id="panel-left-2" width="127" height="30" style="margin-right: 5px;"></canvas>
+                        <canvas id="panel-middle-2" width="127" height="30" style="margin-right: 5px;"></canvas>
+                        <canvas id="panel-right-2" width="127" height="30"></canvas>
+                    </div>
+                </div>
+
+                <div class="flexcontainer" style="width:415px;">
+                    <div class="flexchild" style="width: 415px; height: 30px;">
+                        <canvas id="panel-left-3" width="127" height="30" style="margin-right: 5px;"></canvas>
+                        <canvas id="panel-middle-3" width="127" height="30" style="margin-right: 5px;"></canvas>
+                        <canvas id="panel-right-3" width="127" height="30"></canvas>
+                    </div>
+                </div>
+
+                <div style="width: 415px;height:150px;margin-top: 20px;">
+                    <table style="width: 415px;">
+                        <tr>
+                            <td style="width: 100px;">
+                                <!-- <div id='donut1' style="width: 100px; height: 100px;"></div> -->
+                                <canvas id="donutchart1" width="100" height="100"></canvas>
+                            </td>
+                            <td style="width: 100px;">
+                                <canvas id="donutchart2" width="100" height="100"></canvas>
+                                <!-- <div id='donut2' style="width: 100px; height: 100px;"></div> -->
+                            </td>
+                            <td style="width: 100px;">
+                                <!-- <div id='donut3' style="width: 100px; height: 100px;"></div> -->
+                                <canvas id="ONOFF" width="100" height="100"></canvas>
+                            </td>
+                            <td style="width: 100px;">
+                                <!-- <div id='donut4' style="width: 100px; height: 100px;"></div> -->
+                                <canvas id="FAULT" width="100" height="100"></canvas>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                            <div class="flexcontainer">
+                                <div>
+                                    <strong style="color: white">Compressor Capacity</strong>
+                                </div>
+                            </div>
+                            </td>
+                            <td colspan="2">
+                            <div class="flexcontainer">
+                                <div>
+                                    <strong style="color: white">Unit</strong>
+                                </div>
+                            </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+<br>
+    <div class="container">
+        <div class="row" style="justify-content: center;">
+            <div class="col-xs-12">
+                <!------------------------------>
+                <div id="accordion" style="width:965px;">
+				    <h3 id="section1">Room Temperature</h3>
+
+				    <div class="flexcontainer">
+				    	<div id="chartContainer1" style="width:100%; height:400px;"></div>
+				    </div>
+				    <h3 id="section2">Compressor Capacity</h3>
+
+				    <div class="flexcontainer">
+				    	<div id="chartContainer2" style="width:100%; height:400px;"></div>
+				    </div>
+				    <h3 id="section3">Evaporating Temperature</h3>
+
+				    <div class="flexcontainer">
+				        <div id="chartContainer3" style="width:100%; height:400px;"></div>
+				    </div>
+				    <h3 id="section4">Condensing Temperature</h3>
+				    <div class="flexcontainer">
+				       <div id="chartContainer4" style="width:100%; height:400px;"></div>
+				    </div>
+				    <h3 id="section5">SSH</h3>
+
+                    <div class="flexcontainer">
+                        <div id="chartContainer5" style="width:100%; height:400px;"></div>
+                    </div>
+                    <h3 id="section6">DSH</h3>
+                    <div class="flexcontainer">
+                       <div id="chartContainer6" style="width:100%; height:400px;"></div>
+                    </div>
+				</div>
+                <!------------------------------>
+            </div>
+        </div>
+    </div>
+</body>
+<script type="text/javascript" src="/js/jqwidgetstest3.js"></script>
+<script type="text/javascript" src="/js/gauge3.js"></script>
+<script type="text/javascript" src="/js/createjscanvascharts.js"></script>
+</html>

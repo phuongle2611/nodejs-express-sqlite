@@ -1,0 +1,31 @@
+doctype html
+html(lang="en")
+  head
+    title= title
+    link(rel="stylesheet" type="text/css" href="/css/bootstrap.min.css")
+    script(type='text/javascript' src='/jquery/js/jquery-1.12.4.js')
+    script(type='text/javascript' src='/js/settime.js')
+  body
+    div(id='systemid' style='display:none;')= systemid
+    div(id='systemtitle' style='display:none;')= systemtitle
+    div(id='website' style='display:none;')= website
+    div(id='timezone' style='display:none;')= timezone
+    div(id='aliasjson' style='display:none;')!=JSON.stringify(aliasjson)
+
+    div(class='container-fluid')
+        div(class='row')
+            br
+        div(class='row' style='display:flex;justify-content:center;')
+            a(class='btn btn-info' href='/maintenance') Maintenance Screen
+        div(class='row')
+            br
+    div(id='app')
+    br
+    br
+    br
+    br
+    br
+    br
+    br
+    br
+    script(type='text/javascript' src='/js/client.min.js')

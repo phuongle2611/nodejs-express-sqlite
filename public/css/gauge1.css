@@ -1,0 +1,20 @@
+.flexcontainer {
+   display: -webkit-flex;
+   display: flex;
+   -webkit-flex-direction: row; /* works with row or column */
+   flex-direction: row;
+   -webkit-align-items: center;
+   align-items: center;
+   -webkit-justify-content: center;
+   justify-content: center;
+}
+
+input, textarea {
+  -webkit-appearance: none;
+  -webkit-border-radius: 0;
+}
+
+#accordion .ui-accordion-header {
+font-size: 22px;
+-webkit-text-size-adjust: 100%;
+}
